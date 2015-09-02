@@ -1,0 +1,33 @@
+#!/usr/bin/python
+'''Render Mako templates via command line
+
+Usage: mako [-e] TEMPLATE [VAR...]
+
+Options:
+    -e       Include environment variables
+'''
+
+from __future__ import print_function
+
+import os
+import docopt
+
+from mako.template import Template
+
+def main():
+    arguments = docopt.docopt(__doc__, version='mako 0.0.1')
+
+    include_env = arguments['-e']
+    template_filename = arguments['TEMPLATE']
+    variables = arguments['VAR']
+
+    template_vars = dict([entry.split('=') for entry in variables])
+
+    if include_env is True:
+        template_vars.update(os.environ)
+
+    with open(template_filename) as template_file:
+        print(Template(template_file.read()).render(**template_vars))
+
+if __name__ == '__main__':
+    main()

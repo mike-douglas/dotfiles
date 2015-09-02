@@ -1,0 +1,66 @@
+#!/usr/bin/env python
+# Author: miked@insuremytrip.com
+#
+# Like XPath? Use this script to search XML passed to STDIN with XPath. It's lovely.
+
+import sys, getopt
+import libxml2
+
+do_wrap = False
+namespaces = {}
+
+def usage():
+    print "Usage: %s [-n ns:url] [-x] xpath [xpath1 xpath2 ...]" % sys.argv[0]
+
+try:
+    opts, args = getopt.getopt(sys.argv[1:], "xhn:")
+
+    for opt, arg in opts:
+        if opt in ( "-x" ):
+            do_wrap = True
+        elif opt in ( "-n" ):
+            nssplit = arg.split(":", 1)
+            namespaces[nssplit[0]] = nssplit[1]
+        elif opt in ( "-h", "--help" ):
+            usage()
+            print """
+Runs an XPath query over input gathered from stdin.
+
+    -x          Wrap input in an XML declaration and root tag
+    -n ns:url   Register a namespace (yeti is registered by default)
+
+If the XPath query passed returns an XML structure (not a text node), the
+structure will be used as output. This script uses libxml2.
+"""
+            exit(0)
+
+    document = None
+    try:
+        xml = "%s"
+        if do_wrap:
+            xml = "<?xml version='1.0' ?><xml>%s</xml>"
+
+        stdin = xml % "".join(sys.stdin.readlines())
+        document = libxml2.parseMemory(stdin, len(stdin))
+    except Exception, e:
+        print "Error: %s" % e
+        sys.exit(1)
+
+    c = document.xpathNewContext()
+    c.xpathRegisterNs("yeti", "http://www.insuremytrip.com/schema/yeti-2.1.xsd")
+
+    for ns in namespaces.keys():
+        c.xpathRegisterNs(ns, namespaces[ns])
+
+    for path in args:
+        result = c.xpathEval(path)
+        for element in result:
+            if isinstance(element, libxml2.xmlAttr) or element.isText():
+                print element.getContent()
+            else:
+                print element
+except getopt.GetoptError, e:
+    usage()
+    sys.exit(1)
+except KeyboardInterrupt, e:
+    sys.exit(0)

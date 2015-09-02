@@ -1,0 +1,7 @@
+*.pyc
+*.o
+*.hi
+*.errors
+xmonad/xmonad-x86_64-linux
+xmonad/xmonad-i386-linux
+src

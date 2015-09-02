@@ -1,0 +1,45 @@
+#!/usr/bin/python
+
+import datetime
+import sys
+import getopt
+from dateutil.relativedelta import relativedelta
+
+def main(args):
+    """Get a date, calculate a delta"""
+    delta_days = 0
+    delta_months = 0
+    delta_years = 0
+    stamp = datetime.datetime.now()
+
+    try:
+        opts, args = getopt.getopt(args, "m:d:y:", ["days=", "months=", "years=", "start="])
+        for opt, arg in opts:
+            if opt in ("--start"):
+                date = arg.split('-')
+                stamp = datetime.date(int(date[0]), int(date[1]), int(date[2]))
+            elif opt in ("-d", "--days"):
+                delta_days = arg
+            elif opt in ("-m", "--months"):
+                delta_months = arg
+            elif opt in ("-y", "--years"):
+                delta_years = arg
+    except getopt.GetoptError, e:
+        usage()
+        sys.exit(2)
+
+    difference = datetime.timedelta(days=int(delta_days)) 
+
+    print ((stamp + difference) + relativedelta(months=int(delta_months), years=int(delta_years))).strftime("%m/%d/%Y")
+
+def usage():
+    """Show usage for this script"""
+    print "Calculate # of days after a given start date.\n"
+    print "Usage: ", sys.argv[0], " [--start=YYYY-MM-DD] [-d (+|-)DD] [-m (+|-)MM]\n"
+    print "\t--start\t\tStart date (Default = now)"
+    print "\t-d | --days\t\tAmount of days (Default = +0)"
+    print "\t-m | --months\t\tAmount of months (Default = +0)"
+    print "\t-y | --years\t\tAmount of years (Default = +0)"
+
+if __name__ == '__main__':
+    main(sys.argv[1:])

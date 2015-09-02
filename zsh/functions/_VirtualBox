@@ -1,0 +1,49 @@
+#compdef VirtualBox VBoxManage
+
+_vboxmanage() {
+    local state context line
+    local -a vbox_commands
+    vbox_commands=(
+        'addiscsidisk:Add an iSCSI disk'
+        'adoptstate:Adopt a state'
+        'clonehd:Clone a HD'
+        'closemedium:Close medium'
+        'controlvm:Control a VM'
+        'convertfromraw:Convert from raw'
+        'createhd:Create a HD'
+        'createvm:Create a new VM'
+        'dhcpserver:Set DHCP settings'
+        'discardstate:Discard a saved state'
+        'export:Export a VM'
+        'getextradata:Get extra data'
+        'guestproperty:Manage guest properties'
+        'hostonlyif:Host only interface management'
+        'import:Import a VM'
+        'list:List VMs'
+        'metrics:Get metrics'
+        'modifyhd:Modify a HD'
+        'modifyvm:Modify a VM'
+        'openmedium:Open medium'
+        'registervm:Register a VM'
+        'setextradata:Set extra data'
+        'setproperty:Set a property'
+        'sharedfolder:Manage shared folders'
+        'showhdinfo:Show HD info'
+        'showvminfo:Show VM info'
+        'snapshot:Snapshot management'
+        'startvm:Start a VM'
+        'storageattach:Attach storage'
+        'storagectl:Control attached storage'
+        'unregistervm:Unregister a VM'
+        'usbfilter:USB device management'
+        'vmstatistics:VM stats'
+    )
+
+    _arguments -C -s '*:: :->subcmds' && return 0
+
+    if (( CURRENT == 1 )); then
+        _describe -t commands "VirtualBox Management Commands" vbox_commands -V1
+    fi
+}
+
+_vboxmanage "$@"

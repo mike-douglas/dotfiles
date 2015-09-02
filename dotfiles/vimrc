@@ -1,0 +1,17 @@
+" Settings
+set tabstop=4                   " Indentation every 4 cols
+set shiftwidth=4                " Tab = 4 spaces
+set expandtab                   " Spaces > tabs
+set smartindent                 " Smarter indenting
+set showmatch                   " Show matching parens
+set syntax=on                   " Syntax highlighting
+set ff=unix                     " Unix file format
+set showcmd                     " Show commands as they are typed
+set grepprg=/bin/grep           " grep to use
+set wrap                        " Soft wrapping at window edge
+set showbreak=+                 " Break indication character
+set backup                      " Turn on back ups
+set modeline
+set backupdir=~/.tmp/vim_backup " Vim backups
+set dir=~/.tmp/vim_swap         " Vim swap files
+set tw=79
