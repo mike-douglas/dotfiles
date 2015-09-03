@@ -13,7 +13,7 @@ fi
 
 if [ -x "$(command -v pip)" ] && [ -x "$(command -v sudo)" ]; then;
     echo "-- Installing python requirements"
-    $(command -v sudo) $(command -v pip) install -r ${HOME}/.home/python/requirements.txt
+    $(command -v sudo) $(command -v pip) install --src /tmp -r ${HOME}/.home/python/requirements.txt
 else
     echo "!! pip is not found; skipping python package installation"
 fi
