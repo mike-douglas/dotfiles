@@ -4,19 +4,6 @@ function host_info {
     fi
 }
 
-function jobs_info {
-    num=$(jobs | wc -l)
-    if [[ $num -gt 0 ]]; then
-        suffix="jobs"
-
-        if [[ $num -eq 1 ]]; then
-            suffix="job"
-        fi
-
-        echo "(%j ${suffix})"
-    fi
-}
-
 function precmd {
     gprompt=$(git_prompt_info)
 
@@ -26,7 +13,7 @@ function precmd {
 }
 
 PROMPT="$(host_info)%~ ⚡  "
-RPROMPT="%{$(echo "\e[2;37m")%}$(jobs_info) (%!)%{$reset_color%}"
+RPROMPT="%{$FG[239]%}%(2j.jobs: %j.%(1j.job: %j.)) (%!)%{$reset_color%}"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[074]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
