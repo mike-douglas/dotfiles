@@ -87,12 +87,38 @@ alias num='grep -c ^'
 alias pd="pushd"
 alias po="popd"
 alias grep="egrep"
+alias vv="noglob _find_and_open"
 
 alias -g homeserver="straylight.home.kg"
 
 if [ -d "/Applications/Sublime Text.app" ]; then
     alias subl="open -a \"Sublime Text\""
 fi
+
+function _find_and_open {
+    search=${@}
+
+    if [[ ! "${search}" =~ '\*' ]]; then
+        search="${search}*"
+    fi
+
+    result=$(find ${PWD} -iname "${search}")
+    num_results=$(echo ${result} | grep -v ^$ | wc -l | sed 's/ //g')
+
+    if (( ${num_results} == 0 )); then
+        echo "${search}: No files found to open"
+    else
+        if (( ${num_results} == 1 )); then
+            ${EDITOR} ${result}
+        else
+            if [ ${#$(command -v fpp)} != 0 ]; then
+                echo ${result} | fpp
+            else
+                echo ${result} | args ${EDITOR}
+            fi
+        fi
+    fi
+}
 
 function oneline {
     tr "\\n" $1
