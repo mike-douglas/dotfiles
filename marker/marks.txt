@@ -1,0 +1,6 @@
+tar cvzf %%.tar.gz %%##tar 
+tar xvzf %%.tar.gz %%##untar 
+grep -irn "%%" *##grep recursive
+awk '!($0 in array) { array[$0]; print }' %%##remove duplicates
+du -ch  | grep -E "total\$"##directory size
+curl -H "Content-Type: application/json" -X POST -d "%%" %%##curljson

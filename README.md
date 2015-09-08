@@ -5,6 +5,7 @@ This repo contains my dotfiles for my homedir, and some special scripts to make 
 ## Features
 
 - Includes [Oh My Zsh](http://ohmyz.sh/)
+- Includes [marker](https://github.com/pindexis/marker)
 - "Role" based setup (more below)
 - Installs dotfiles into your homedir, runs scripts in `dotfiles/` directory
 - Installs Python packages via pip requirements file
@@ -33,6 +34,7 @@ $ ssh HOSTNAME "cd ./.home && ./install.zsh"
 - sudo
 - Python headers (for compiling Fabric dependencies [paramiko])
 - zsh, duh
+- brew
 
 ## Roles
 
@@ -43,7 +45,7 @@ You can customize the shell setup based on a loose concept of "roles". Simply pu
 Use [docker](http://docker.io)!
 
 ```bash
-$ docker-compose shell run
+$ docker-compose run shell
 ```
 
 This will drop you into /root, this repo will be in `/root/.home`. Run `cd /root/.home && ./install.zsh` to set up and test things.

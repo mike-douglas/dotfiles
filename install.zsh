@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-if [ -x $(command -v git) ]; then
+if [ ${#$(command -v git)} != 0 ]; then
     if [ ! -d ${HOME}/.oh-my-zsh ]; then
         echo "-- Cloning ohmyzsh"
         git clone https://github.com/robbyrussell/oh-my-zsh.git ${HOME}/.oh-my-zsh
@@ -11,7 +11,7 @@ else
     echo "!! git is not found; skipping ohmyzsh clone"
 fi
 
-if [ -x "$(command -v pip)" ] && [ -x "$(command -v sudo)" ]; then;
+if [ ${#$(command -v pip)} != 0 ] && [ ${#$(command -v sudo)} != 0 ]; then;
     echo "-- Installing python requirements"
     $(command -v sudo) $(command -v pip) install --src /tmp -r ${HOME}/.home/python/requirements.txt
 else
