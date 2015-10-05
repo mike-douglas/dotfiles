@@ -10,6 +10,10 @@ if [ -f ${HOME}/.home/zsh/${ROLE}.zsh ]; then
     source ${HOME}/.home/zsh/${ROLE}.zsh
 fi
 
+if [ -f ${HOME}/.tokens.zsh ]; then
+    source ${HOME}/.tokens.zsh
+fi
+
 plugins=($plugins docker fabric virtualenvwrapper)
 
 # Oh my ZSH
