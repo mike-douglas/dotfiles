@@ -143,6 +143,12 @@ function branch_match {
 # VirtualBox functions and helpers
 if [ ${#$(command -v VBoxManage)} != 0 ]; then
     source ${HOME}/.home/zsh/include/virtualbox.zsh
+
+fi
+
+# Docker functions and helpers
+if [ ${#$(command -v docker)} != 0 ]; then
+    source ${HOME}/.home/zsh/include/docker.zsh
 fi
 
 # Virtualenvwrapper settings
