@@ -7,3 +7,9 @@ function docker_vm_map_ports {
         VBoxManage modifyvm "default" --natpf1 "udp-port$i,udp,,$i,,$i";
     done
 }
+
+# Should only need to run this one too; it enables symlinks in shared folders
+# and fixes the "protocol error" when trying to symlink things
+function docker_vm_enable_symlinks {
+    VBoxManage setextradata default VBoxInternal2/SharedFoldersEnableSymlinksCreate/Users 1
+}
