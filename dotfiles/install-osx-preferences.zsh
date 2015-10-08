@@ -4,7 +4,7 @@ OS=$(uname)
 
 if [ "${OS}" = "Darwin" ]; then
     if [ ${#$(command -v brew)} != 0 ]; then
-        cat ${HOME}/.home/osx/brew | xargs brew install
+        cat ${HOME}/.home/osx/brew | grep ${ROLE} | awk '-F#' '{print $1}' | xargs brew install
     fi
 
     PREFS_INSTALL="${HOME}/Library/Preferences/"
