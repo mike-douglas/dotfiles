@@ -146,39 +146,15 @@ username = "${USERNAME}"
 
 [server]
 freenode.addresses = "chat.freenode.net"
-freenode.proxy
-freenode.ipv6
-freenode.ssl
-freenode.ssl_cert
-freenode.ssl_priorities
-freenode.ssl_dhkey_size
-freenode.ssl_fingerprint
-freenode.ssl_verify
-freenode.password
-freenode.capabilities
-freenode.sasl_mechanism
-freenode.sasl_username
-freenode.sasl_password
-freenode.sasl_key
-freenode.sasl_timeout
-freenode.sasl_fail
 freenode.autoconnect = on
-freenode.autoreconnect
-freenode.autoreconnect_delay
 freenode.nicks = "${USERNAME}"
 freenode.username = "${USERNAME}"
 freenode.realname = "${REALNAME}"
-freenode.local_hostname
 freenode.command = "/msg nickserv identify ${PASSWORD}"
-freenode.command_delay
-freenode.autorejoin
-freenode.autorejoin_delay
-freenode.connection_timeout
-freenode.anti_flood_prio_high
-freenode.anti_flood_prio_low
-freenode.away_check
-freenode.away_check_max_nicks
-freenode.default_msg_kick
-freenode.default_msg_part
-freenode.default_msg_quit
-freenode.notify
+
+efnet.addresses = "chat.efnet.net"
+efnet.autoconnect = on
+efnet.autoreconnect_delay
+efnet.nicks = "${USERNAME}"
+efnet.username = "${USERNAME}"
+efnet.realname = "${REALNAME}"

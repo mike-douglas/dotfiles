@@ -4,7 +4,10 @@ OS=$(uname)
 
 if [ "${OS}" = "Darwin" ]; then
     if [ ${#$(command -v brew)} != 0 ]; then
-        cat ${HOME}/.home/osx/brew | grep ${ROLE} | awk '-F#' '{print $1}' | xargs brew install
+        cat ${HOME}/.home/osx/brew | grep ${ROLE} | grep -v \-\- | awk '-F#' '{print $1}' | xargs brew install
+
+        # Install the packages with command line flags on their own
+        cat ${HOME}/.home/osx/brew | grep ${ROLE} | grep \-\- | awk '-F#' '{print $1}' | xargs -n1 brew install
     fi
 
     PREFS_INSTALL="${HOME}/Library/Preferences/"
