@@ -13,3 +13,7 @@ function docker_vm_map_ports {
 function docker_vm_enable_symlinks {
     VBoxManage setextradata default VBoxInternal2/SharedFoldersEnableSymlinksCreate/Users 1
 }
+
+function docker_purge_containers {
+    docker ps -a | grep Exited | grep ${@} | awk '{print $1}' | xargs docker rm
+}
