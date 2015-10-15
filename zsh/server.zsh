@@ -13,7 +13,7 @@ function docker-deploy {
 
     if [ ! -e "${docker_compose_file}" ]; then
         echo "Cannot continue; docker-compose file ${docker_compose_file} does not exist!"
-        exit 1
+        return
     fi
 
     if [ ${#$(command -v docker-compose)} != 0 ]; then
@@ -23,6 +23,6 @@ function docker-deploy {
             && docker-compose -f "${docker_compose_file}" up -d
     else
         echo "Cannot continue; you don't have docker-compose installed!"
-        exit 1
+        return
     fi
 }
