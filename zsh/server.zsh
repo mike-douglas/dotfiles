@@ -17,7 +17,7 @@ function docker-deploy {
     fi
 
     if [ ${#$(command -v docker-compose)} != 0 ]; then
-        docker-compose -f "${docker_compose_file}" down \
+        docker-compose -f "${docker_compose_file}" stop \
             && echo y | docker-compose -f "${docker_compose_file}" rm \
             && docker-compose -f "${docker_compose_file}" build \
             && docker-compose -f "${docker_compose_file}" up -d
