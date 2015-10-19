@@ -1,4 +1,8 @@
 
+if [ "$(uname)" = "Darwin" ]; then
+    alias docker_terminal="/Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh"
+fi
+
 # You should only need to do this once! But now you never need to google for it again <3
 function docker_vm_map_ports {
     for i in {8000..9999}; do
