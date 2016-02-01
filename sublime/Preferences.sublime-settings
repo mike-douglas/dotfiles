@@ -9,5 +9,5 @@
 	"theme": "Spacegray Eighties.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"typescript_plugin_tsc_version": "1.6.2"
+	"typescript_plugin_tsc_version": "1.7.3"
 }
