@@ -49,3 +49,15 @@ $ docker-compose run shell
 ```
 
 This will drop you into /root, this repo will be in `/root/.home`. Run `cd /root/.home && ./install.zsh` to set up and test things.
+
+## Notes
+
+Some notes specific to certain applications
+
+### Atom
+
+If the Atom editor is installed and `apm` exists, then the packages in `atom/packages.list` will be installed. To regenerate this list, run:
+
+```bash
+$ apm list --installed --bare
+```
