@@ -21,3 +21,13 @@ function docker_vm_enable_symlinks {
 function docker_purge_containers {
     docker ps -a | grep Exited | grep ${@} | awk '{print $1}' | xargs docker rm
 }
+
+function docker_command {
+    # Usage: docker_command IMAGE_OR_CONTAINER VOLUME CMD...
+    docker run -it --rm --name cli-invocation \
+            -v "${PWD}":${2} \
+            -w ${2} \
+            $1 ${@[3,${#@}]}
+}
+
+alias docker_py3="docker_command python:3 /usr/src/myapp"
