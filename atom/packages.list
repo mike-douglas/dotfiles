@@ -1,11 +1,12 @@
 Sublime-Style-Column-Selection@1.5.1
-atom-beautify@0.28.26
+atom-beautify@0.29.1
 atom-jade@0.3.0
-emmet@2.4.2
+emmet@2.4.3
 ex-mode@0.8.0
-git-plus@5.13.0
-linter@1.11.3
-project-manager@2.7.6
+git-plus@5.13.4
+linter@1.11.4
+project-manager@2.9.4
+react@0.15.0
 vim-mode@0.65.0
 vim-mode-visual-block@0.2.15
 vim-surround@0.8.1
