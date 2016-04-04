@@ -35,6 +35,7 @@ $ ssh HOSTNAME "cd ./.home && ./install.zsh"
 - Python headers (for compiling Fabric dependencies [paramiko])
 - zsh, duh
 - brew
+- ansible-vault (optional, part of [ansible](http://ansible.com), used to secure somewhat sensitive configs for work and what-not)
 
 ## Roles
 
