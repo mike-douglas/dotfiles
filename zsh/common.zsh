@@ -68,6 +68,9 @@ export HISTFILE=$HOME/.zhistory
 export HISTSIZE=5000
 export SAVEHIST=5000
 
+# Turn off cowsay in ansible
+export ANSIBLE_NOCOWS=1
+
 # Go path
 export GOPATH="$HOME/go"
 
