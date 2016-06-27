@@ -62,3 +62,11 @@ If the Atom editor is installed and `apm` exists, then the packages in `atom/pac
 ```bash
 $ apm list --installed --bare
 ```
+
+### SSH
+
+SSH configs are encrypted using `ansible-vault`:
+
+```bash
+$ ansible-vault --ask-vault-pass (encrypt|decrypt) ...
+```
