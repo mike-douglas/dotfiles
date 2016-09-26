@@ -15,4 +15,9 @@ if [ -d "/Applications/Sublime Text.app" ]; then
     for file in ${HOME}/.home/sublime/*; do
         cp "${file}" "${SUBLIME_USER_PACKAGE}"
     done
+
+    # Makes h j k l and other vintage sublime keys repeat in OS X >= Lion
+    if [ ${#$(command -v defaults)} ]; then
+        defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
+    fi
 fi
