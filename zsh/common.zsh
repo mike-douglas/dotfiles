@@ -121,7 +121,7 @@ function _find_and_open {
             if [ ${#$(command -v fpp)} != 0 ]; then
                 echo ${result} | fpp
             else
-                echo ${result} | args ${EDITOR}
+                echo ${result} | xargs ${EDITOR}
             fi
         fi
     fi
