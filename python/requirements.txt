@@ -5,3 +5,4 @@ docopt==0.6.1
 Mako==1.0.1
 pync==1.6.1
 -e git+git://github.com/mike-douglas/xin.git@0.1#egg=Xin
+-e git+git://github.com/pipakin/geeknote#egg=geeknote
