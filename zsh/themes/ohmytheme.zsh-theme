@@ -12,7 +12,7 @@ function precmd {
     fi
 }
 
-PROMPT="$(host_info)%~ ⚡  "
+PROMPT="$(host_info)%~ 🔥  "
 RPROMPT="%{$FG[239]%}%(2j.jobs: %j.%(1j.job: %j.)) (%!)%{$reset_color%}"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[074]%}"
