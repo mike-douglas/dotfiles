@@ -7,7 +7,8 @@
       "nord-atom-syntax"
     ]
     useCustomTitleBar: true
-  editor: {}
+  editor:
+    fontSize: 12
   "exception-reporting":
     userId: "5d81f41a-d04c-10c8-7b6a-dab76b3b1b38"
   "platformio-ide-terminal":
