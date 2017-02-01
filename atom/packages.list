@@ -1,4 +1,5 @@
 atom-beautify@0.29.17
+atom-python-virtualenv@0.6.0
 emmet@2.4.3
 emmet-jsx-css-modules@1.0.0
 ex-mode@0.13.1

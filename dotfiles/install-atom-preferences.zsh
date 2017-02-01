@@ -11,6 +11,6 @@ if [ "${OS}" = "Darwin" ]; then
     ATOM_INSTALL="${HOME}/.atom/"
 
     for file in ${HOME}/.home/atom/*.{cson,less}; do
-        ln -s ${file} ${ATOM_INSTALL}
+        ln -fs ${file} ${ATOM_INSTALL}
     done
 fi
