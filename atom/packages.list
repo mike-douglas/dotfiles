@@ -3,8 +3,8 @@ atom-python-virtualenv@0.6.0
 emmet@2.4.3
 emmet-jsx-css-modules@1.0.0
 ex-mode@0.13.1
-file-icons@2.0.13
-git-plus@7.2.0
+file-icons@2.0.15
+git-plus@7.2.1
 linter@1.11.21
 linter-eslint@8.1.0
 nord-atom-syntax@0.6.0
