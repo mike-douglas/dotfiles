@@ -7,6 +7,8 @@
     grep = true
 [merge]
     tool = vimdiff
+[pull]
+    rebase = true
 [push]
     default = tracking
 [rerere]
