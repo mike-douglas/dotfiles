@@ -14,6 +14,7 @@
     userId: "5d81f41a-d04c-10c8-7b6a-dab76b3b1b38"
   linter:
     errorPanelHeight: 28
+  "linter-ui-default": {}
   "platformio-ide-terminal":
     toggles:
       autoClose: true

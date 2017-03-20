@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/local/bin/python
 
 import os
 import sys
@@ -34,7 +34,7 @@ def main(args):
     board = None
 
     for b in client.list_boards():
-        if b.name == os.environ['TRELLO_BOARD']:
+        if b.name.lower() == os.environ['TRELLO_BOARD'].lower():
             board = b
             break
 
@@ -48,7 +48,7 @@ def main(args):
             return
 
         for l in b.all_lists():
-            if l.name == card_list:
+            if l.name.lower() == card_list.lower():
                 l.add_card(card_title, card_content)
 
 if __name__ == '__main__':
