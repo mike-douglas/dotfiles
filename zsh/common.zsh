@@ -72,10 +72,11 @@ export SAVEHIST=5000
 export ANSIBLE_NOCOWS=1
 
 # Go path
-export GOPATH="$HOME/go"
+export GOPATH="${HOME}/go"
+export GOBIN="${GOPATH}/bin"
 
 # Add custom path
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.bin:$HOME/bin:/sbin:/usr/sbin:$GOPATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.bin:$HOME/bin:/sbin:/usr/sbin:${GOBIN}"
 
 # Pager
 export PAGER=$(command -v less)
