@@ -71,12 +71,8 @@ export SAVEHIST=5000
 # Turn off cowsay in ansible
 export ANSIBLE_NOCOWS=1
 
-# Go path
-export GOPATH="${HOME}/go"
-export GOBIN="${GOPATH}/bin"
-
 # Add custom path
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.bin:$HOME/bin:/sbin:/usr/sbin:${GOBIN}"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.bin:$HOME/bin:/sbin:/usr/sbin:${HOME}/go/bin"
 
 # Pager
 export PAGER=$(command -v less)
