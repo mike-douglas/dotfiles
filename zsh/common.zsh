@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Role-based customizations
-export ROLE=$(grep ${HOST} ${HOME}/.home/roles/* | head -n1 | cut -d: -f1 | rev | cut -d/ -f1 | rev)
+export ROLE=$(grep -i ${HOST} ${HOME}/.home/roles/* | head -n1 | cut -d: -f1 | rev | cut -d/ -f1 | rev)
 
 # Theme
 export ZSH_THEME="ohmytheme"
