@@ -1,0 +1,50 @@
+[
+	{
+		"name": "Home",
+		"rootPath": "$home/.home",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "boards-api-v7",
+		"rootPath": "$home/src/boards-api-v7",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "boards-web-v7",
+		"rootPath": "$home/src/boards-web-v7",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "home-ui-v7",
+		"rootPath": "$home/src/home-ui-v7",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "home-web-v7",
+		"rootPath": "$home/src/home-web-v7",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "index-api-v7",
+		"rootPath": "$home/src/index-api-v7",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "share-dialog",
+		"rootPath": "$home/src/share-dialog",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "share-dialog-web-v7",
+		"rootPath": "$home/src/share-dialog-web-v7",
+		"paths": [],
+		"group": ""
+	}
+]
