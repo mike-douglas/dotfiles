@@ -163,3 +163,5 @@ if [ ${#$(command -v virtualenvwrapper.sh)} != 0 ]; then
 fi
 
 [[ -s "$HOME/.local/share/marker/marker.sh" ]] && source "$HOME/.local/share/marker/marker.sh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
