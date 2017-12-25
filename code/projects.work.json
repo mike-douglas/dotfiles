@@ -46,5 +46,35 @@
 		"rootPath": "$home/src/share-dialog-web-v7",
 		"paths": [],
 		"group": ""
+	},
+	{
+		"name": "boards-uploader-v7",
+		"rootPath": "$home/src/boards-uploader-v7",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "boards-thumbnailer-v7",
+		"rootPath": "$home/src/boards-thumbnailer-v7",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "boards-ui",
+		"rootPath": "$home/src/boards-ui",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "engineering-notes",
+		"rootPath": "$home/src/engineering-notes",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "onboarding",
+		"rootPath": "$home/src/onboarding",
+		"paths": [],
+		"group": ""
 	}
 ]
