@@ -1,11 +1,10 @@
-call plug#begin('~/.vim/plugged')
-Plug 'tpope/vim-surround'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-call plug#end()
+packadd minpac
+call minpac#init()
+call minpac#add('tpope/vim-surround')
+call minpac#add('ctrlpvim/ctrlp.vim')
+call minpac#add('scrooloose/nerdtree')
+call minpac#add('terryma/vim-multiple-cursors')
+call minpac#add('k-takata/minpac', {'type': 'opt'})
 
 " map <C-n> :NERDTreeToggle<CR>
 
