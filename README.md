@@ -70,3 +70,12 @@ SSH configs are encrypted using `ansible-vault`:
 ```bash
 $ ansible-vault --ask-vault-pass (encrypt|decrypt) ...
 ```
+
+### Vim
+
+Vim uses [minipac](https://github.com/k-takata/minpac), so you need to install the packages from it. Inside of vim, do:
+
+```bash
+" To install or update plugins:
+:call minpac#update()
+```

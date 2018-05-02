@@ -17,6 +17,11 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 syn on
 colorscheme molokai
 
+map <silent> <C-h> :call functions#winmove('h')<cr>
+map <silent> <C-j> :call functions#winmove('j')<cr>
+map <silent> <C-k> :call functions#winmove('k')<cr>
+map <silent> <C-l> :call functions#winmove('l')<cr>
+
 " Settings
 " set tabstop=4                   " Indentation every 4 cols
 " set shiftwidth=4                " Tab = 4 spaces
