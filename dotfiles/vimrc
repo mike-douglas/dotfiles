@@ -55,6 +55,7 @@ set ttyfast
 set backspace=indent,eol,start
 
 "" Tabs. May be overridden by autocmd rules
+set ai
 set tabstop=4
 set softtabstop=0
 set shiftwidth=4
@@ -68,7 +69,7 @@ set hidden
 
 "" Searching
 set nohlsearch
-set incsearch
+" set incsearch
 set ignorecase
 set smartcase
 
