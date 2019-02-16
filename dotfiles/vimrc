@@ -8,6 +8,8 @@ call minpac#add('vim-airline/vim-airline')
 call minpac#add('vim-airline/vim-airline-themes')
 call minpac#add('tomasr/molokai')
 call minpac#add('easymotion/vim-easymotion')
+call minpac#add('pangloss/vim-javascript')
+call minpac#add('mxw/vim-jsx')
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 
 " map <C-n> :NERDTreeToggle<CR>
