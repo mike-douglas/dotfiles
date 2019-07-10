@@ -31,3 +31,4 @@ function docker_command {
 }
 
 alias docker_py3="docker_command python:3 /usr/src/myapp"
+alias dry="docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -e DOCKER_HOST=$DOCKER_HOST moncho/dry"
