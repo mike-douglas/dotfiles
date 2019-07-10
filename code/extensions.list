@@ -1,8 +1,6 @@
 DavidAnson.vscode-markdownlint
-PeterJausovec.vscode-docker
-TwentyChung.jsx
-alefragnani.project-manager
-donjayamanne.python
-dzannotti.vscode-babel-coloring
-lukehoban.Go
+dbaeumer.vscode-eslint
+ms-azuretools.vscode-docker
+ms-python.python
+ms-vscode.sublime-keybindings
 vscodevim.vim

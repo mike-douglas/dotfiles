@@ -16,9 +16,6 @@ if [ "${OS}" = "Darwin" ]; then
         ln -fs ${file} ${CODE_INSTALL}
     done
 
-    if [ -f ${HOME}/.home/code/projects.${ROLE}.json ]; then
-        ln -sf ${HOME}/.home/code/projects.${ROLE}.json ${CODE_INSTALL}/projects.json
-    else
-        echo "      !!!! No projects.json for role ${ROLE}, skipping"
-    fi
+    # Set up repeat-on-hold for vim plugin in vscode
+    defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 fi

@@ -5,7 +5,6 @@ This repo contains my dotfiles for my homedir, and some special scripts to make 
 ## Features
 
 - Includes [Oh My Zsh](http://ohmyz.sh/)
-- Includes [marker](https://github.com/pindexis/marker)
 - "Role" based setup (more below)
 - Installs dotfiles into your homedir, runs scripts in `dotfiles/` directory
 - Installs Python packages via pip requirements file
@@ -55,12 +54,12 @@ This will drop you into /root, this repo will be in `/root/.home`. Run `cd /root
 
 Some notes specific to certain applications
 
-### Atom
+### Visual Studio Code
 
-If the Atom editor is installed and `apm` exists, then the packages in `atom/packages.list` will be installed. To regenerate this list, run:
+If VSCode is installed, my settings will be linked from `./code/` into the appropriate place and extensions will be installed. To generate the list of extensions to install for the future, run:
 
 ```bash
-$ apm list --installed --bare
+$ code --list-extensions > ~/.home/code/extensions.list
 ```
 
 ### SSH
