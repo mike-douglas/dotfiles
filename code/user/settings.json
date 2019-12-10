@@ -8,7 +8,11 @@
     "[python]": {
         "editor.tabSize": 4
     },
-    "window.zoomLevel": 0,
+    "window.zoomLevel": -1,
     "javascript.updateImportsOnFileMove.enabled": "never",
     "extensions.ignoreRecommendations": false,
+    "git.ignoreMissingGitWarning": true,
+    "breadcrumbs.enabled": true,
+    "editor.renderWhitespace": "none",
+    "explorer.confirmDelete": false,
 }

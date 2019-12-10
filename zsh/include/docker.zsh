@@ -22,7 +22,7 @@ function docker_purge_containers {
     docker ps -a | grep Exited | grep ${@} | awk '{print $1}' | xargs docker rm
 }
 
-function docker_command {
+function docker_interactive {
     # Usage: docker_command IMAGE_OR_CONTAINER VOLUME CMD...
     docker run -it --rm --name cli-invocation \
             -v "${PWD}":${2} \
@@ -30,7 +30,16 @@ function docker_command {
             $1 ${@[3,${#@}]}
 }
 
-alias docker_py3="docker_command python:3 /usr/src/myapp"
+function docker_command {
+    # Usage: docker_command IMAGE_OR_CONTAINER VOLUME CMD...
+    docker run --rm --name app \
+            -v "${PWD}":${2} \
+            -w ${2} \
+            -t $1 ${@[3,${#@}]} 
+}
+
+alias docker_py3="docker_interactive python:3 /usr/src/myapp"
+alias ascii2gif="docker_command asciinema/asciicast2gif /data -t solarized-dark"
 
 # Dry is a nice docker CLI tool
 alias dry="docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -e DOCKER_HOST=$DOCKER_HOST moncho/dry"
