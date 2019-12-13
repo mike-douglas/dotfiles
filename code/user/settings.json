@@ -10,7 +10,7 @@
     },
     "window.zoomLevel": -1,
     "javascript.updateImportsOnFileMove.enabled": "never",
-    "extensions.ignoreRecommendations": false,
+    "extensions.ignoreRecommendations": true,
     "git.ignoreMissingGitWarning": true,
     "breadcrumbs.enabled": true,
     "editor.renderWhitespace": "none",

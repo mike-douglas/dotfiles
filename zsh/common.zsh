@@ -48,6 +48,9 @@ bindkey "^[[B" down-line-or-beginning-search
 # Buffer stack
 bindkey "\eq" push-line-or-edit
 
+# History search with pattern
+bindkey '^R' history-incremental-pattern-search-backward
+
 # Tab completion stuff
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 
