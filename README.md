@@ -16,16 +16,16 @@ This repo contains my dotfiles for my homedir, and some special scripts to make 
 Install on your main machine with:
 
 ```bash
-$ git clone THIS_REPO ~/.home
-$ cd ~/.home && ./install.zsh
+git clone THIS_REPO ~/.home
+cd ~/.home && ./install.zsh
 ```
 
 Install on a remote machine with:
 
 ```bash
-$ cd ~/.home
-$ ./push_changes.zsh HOSTNAME
-$ ssh HOSTNAME "cd ./.home && ./install.zsh"
+cd ~/.home
+./push_changes.zsh HOSTNAME
+ssh HOSTNAME "cd ./.home && ./install.zsh"
 ```
 
 ### Requirements
@@ -33,8 +33,7 @@ $ ssh HOSTNAME "cd ./.home && ./install.zsh"
 - sudo
 - Python headers (for compiling Fabric dependencies [paramiko])
 - zsh, duh
-- brew
-- ansible-vault (optional, part of [ansible](http://ansible.com), used to secure somewhat sensitive configs for work and what-not)
+- brew (OS X)
 
 ## Roles
 
@@ -45,7 +44,7 @@ You can customize the shell setup based on a loose concept of "roles". Simply pu
 Use [docker](http://docker.io)!
 
 ```bash
-$ docker-compose run shell
+docker-compose run shell
 ```
 
 This will drop you into /root, this repo will be in `/root/.home`. Run `cd /root/.home && ./install.zsh` to set up and test things.
@@ -59,7 +58,7 @@ Some notes specific to certain applications
 If VSCode is installed, my settings will be linked from `./code/` into the appropriate place and extensions will be installed. To generate the list of extensions to install for the future, run:
 
 ```bash
-$ code --list-extensions > ~/.home/code/extensions.list
+code --list-extensions > ~/.home/code/extensions.list
 ```
 
 ### SSH
@@ -67,7 +66,7 @@ $ code --list-extensions > ~/.home/code/extensions.list
 SSH configs are encrypted using `ansible-vault`:
 
 ```bash
-$ ansible-vault --ask-vault-pass (encrypt|decrypt) ...
+ansible-vault --ask-vault-pass (encrypt|decrypt) ...
 ```
 
 ### Vim
