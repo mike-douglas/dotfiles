@@ -11,9 +11,9 @@ else
     echo "!! git is not found; skipping ohmyzsh clone"
 fi
 
-if [ ${#$(command -v pip)} != 0 ] && [ ${#$(command -v sudo)} != 0 ]; then;
+if [ ${#$(command -v pip3)} != 0 ] && [ ${#$(command -v sudo)} != 0 ]; then;
     echo "-- Installing python requirements"
-    $(command -v sudo) $(command -v pip) install --src /tmp -r ${HOME}/.home/python/requirements.txt
+    $(command -v sudo) $(command -v pip3) install --src /tmp -r ${HOME}/.home/python/requirements.txt
 else
     echo "!! pip is not found; skipping python package installation"
 fi

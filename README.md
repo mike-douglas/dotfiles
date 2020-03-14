@@ -31,6 +31,7 @@ ssh HOSTNAME "cd ./.home && ./install.zsh"
 ### Requirements
 
 - sudo
+- python3 / pip3
 - Python headers (for compiling Fabric dependencies [paramiko])
 - zsh, duh
 - brew (OS X)
