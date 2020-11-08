@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 '''Tail a redis sub-pub channel
 
 Usage: rtail [--c=<cols>] [--p=<port>] [-ve] (table|pretty|raw) <host> [CHANNEL ...]
