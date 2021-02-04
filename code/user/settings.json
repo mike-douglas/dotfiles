@@ -14,7 +14,7 @@
     "[python]": {
         "editor.tabSize": 4
     },
-    "window.zoomLevel": -1,
+    "window.zoomLevel": 0,
     "javascript.updateImportsOnFileMove.enabled": "never",
     "extensions.ignoreRecommendations": true,
     "git.ignoreMissingGitWarning": true,
