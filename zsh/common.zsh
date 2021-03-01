@@ -98,10 +98,6 @@ alias vv="noglob _find_and_open"
 
 alias -g homeserver="straylight.home.kg"
 
-if [ -d "/Applications/Sublime Text.app" ]; then
-    alias subl="open -a \"Sublime Text\""
-fi
-
 function _find_and_open {
     search=${@}
 
