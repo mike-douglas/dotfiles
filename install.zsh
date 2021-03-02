@@ -18,6 +18,13 @@ else
     echo "!! pip is not found; skipping python package installation"
 fi
 
+if [ ${#$(command -v brew)} != 0 ]; then;
+    echo "-- Installing homebrew packages"
+    cat ${HOME}/.home/brew/packages.txt | xargs -n1 $(command -v brew) install
+else
+    echo "!! brew is not installed; check brew/packages.txt for packages to install manually"
+fi
+
 echo "-- Linking common.zsh"
 rm ${HOME}/.zshrc
 ln -s ${HOME}/.home/zsh/common.zsh ${HOME}/.zshrc

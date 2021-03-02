@@ -78,3 +78,7 @@ Vim uses [minipac](https://github.com/k-takata/minpac), so you need to install t
 " To install or update plugins:
 :call minpac#update()
 ```
+
+### Keys, tokens, environment variables per install
+
+Keep keys and environment variables in `${HOME}/.tokens.zsh` and they'll be imported at launch

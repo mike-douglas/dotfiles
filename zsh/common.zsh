@@ -127,10 +127,6 @@ function oneline {
     tr "\\n" $1
 }
 
-function ff {
-    fab -f ${HOME}/.home/fabfile $@
-}
-
 function unicodehex {
     echo $1 | hexdump | awk '{print "\\x"toupper(substr($2,3,4)) "\\x"toupper(substr($2,0,2)) "\\x"toupper(substr($3,3,4))}' | head -1
 }
@@ -160,7 +156,3 @@ if [ ${#$(command -v virtualenvwrapper.sh)} != 0 ]; then
     export PIP_VIRTUALENV_BASE=${WORKON_HOME}
     export PIP_RESPECT_VIRTUALENV=true
 fi
-
-[[ -s "$HOME/.local/share/marker/marker.sh" ]] && source "$HOME/.local/share/marker/marker.sh"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
