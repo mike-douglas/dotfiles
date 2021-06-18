@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python33
 # Author: miked@insuremytrip.com
 #
 # Like XPath? Use this script to search XML passed to STDIN with XPath. It's lovely.
