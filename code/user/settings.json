@@ -21,4 +21,13 @@
     "breadcrumbs.enabled": true,
     "editor.renderWhitespace": "none",
     "explorer.confirmDelete": false,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "license.author": "Mike Douglas",
+    "license.year": "auto",
+    "license.extension": ".md",
 }
