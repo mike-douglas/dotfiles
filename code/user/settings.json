@@ -21,13 +21,15 @@
     "breadcrumbs.enabled": true,
     "editor.renderWhitespace": "none",
     "explorer.confirmDelete": false,
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
     "license.author": "Mike Douglas",
     "license.year": "auto",
     "license.extension": ".md",
+    "security.workspace.trust.untrustedFiles": "open",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
 }

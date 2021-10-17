@@ -75,7 +75,7 @@ export SAVEHIST=5000
 export ANSIBLE_NOCOWS=1
 
 # Add custom path
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.bin:$HOME/bin:/sbin:/usr/sbin:${HOME}/go/bin"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.bin:$HOME/bin:/sbin:/usr/sbin:${HOME}/go/bin:$(python3 -c 'import site; print(site.USER_BASE)')/bin"
 
 # Pager
 export PAGER=$(command -v less)
@@ -160,3 +160,6 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Added by serverless binary installer
+export PATH="$HOME/.serverless/bin:$PATH"
