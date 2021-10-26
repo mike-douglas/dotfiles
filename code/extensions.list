@@ -1,3 +1,4 @@
+codezombiech.gitignore
 connor4312.css-theme-completions
 DavidAnson.vscode-markdownlint
 dbaeumer.vscode-eslint
@@ -5,8 +6,12 @@ linyang95.php-symbols
 lunuan.kubernetes-templates
 ms-azuretools.vscode-docker
 ms-python.python
+ms-python.vscode-pylance
 ms-toolsai.jupyter
+ms-toolsai.jupyter-keymap
+ms-toolsai.jupyter-renderers
 ms-vscode.sublime-keybindings
 octref.vetur
+ultram4rine.vscode-choosealicense
 vscodevim.vim
 wholroyd.HCL
