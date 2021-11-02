@@ -1,6 +1,8 @@
 [core]
     excludesFile = ${HOME}/.home/git/global_ignore
     editor = vim '+:set tw=76'
+[init]
+    defaultBranch = main
 [branch]
     autosetuprebase = always
 [color]
