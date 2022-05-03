@@ -148,6 +148,10 @@ fi
 
 # Virtualenvwrapper settings
 if [ ${#$(command -v virtualenvwrapper.sh)} != 0 ]; then
+    if [ ${#$(command -v python3)} != 0 ]; then
+        export VIRTUALENVWRAPPER_PYTHON=`which python3`
+    fi
+
     export VIRTUALENV_USE_DISTRIBUTE=1
     export WORKON_HOME=${HOME}/.virtualenvs
 
