@@ -14,7 +14,7 @@ if [ -f ${HOME}/.tokens.zsh ]; then
     source ${HOME}/.tokens.zsh
 fi
 
-plugins=($plugins docker fabric virtualenvwrapper)
+plugins=($plugins docker)
 
 # Oh my ZSH
 if [ -d ${HOME}/.oh-my-zsh ]; then
