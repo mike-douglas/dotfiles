@@ -75,7 +75,7 @@ export SAVEHIST=5000
 export ANSIBLE_NOCOWS=1
 
 # Add custom path
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.bin:$HOME/bin:/sbin:/usr/sbin:${HOME}/go/bin:$(python3 -c 'import site; print(site.USER_BASE)')/bin"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.bin:$HOME/bin:/sbin:/usr/sbin:${HOME}/go/bin:$(python3 -c 'import site; print(site.USER_BASE)')/bin:./node_modules/.bin"
 
 # Pager
 export PAGER=$(command -v less)
@@ -159,6 +159,10 @@ if [ ${#$(command -v virtualenvwrapper.sh)} != 0 ]; then
 
     export PIP_VIRTUALENV_BASE=${WORKON_HOME}
     export PIP_RESPECT_VIRTUALENV=true
+fi
+
+if [ ${#$(command -v pyenv)} != 0 ]; then
+    export PATH="$(pyenv root)/shims:$PATH"
 fi
 
 export NVM_DIR="$HOME/.nvm"
