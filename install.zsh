@@ -3,7 +3,7 @@
 if [ ${#$(command -v git)} != 0 ]; then
     if [ ! -d ${HOME}/.oh-my-zsh ]; then
         echo "-- Cloning ohmyzsh"
-        git clone https://github.com/robbyrussell/oh-my-zsh.git ${HOME}/.oh-my-zsh
+        sh -c "$(curl -fsSL https://install.ohmyz.sh/)"
     else
         echo "** ohmyzsh is already installed; skipping"
     fi

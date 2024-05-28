@@ -14,7 +14,7 @@ if [ -f ${HOME}/.tokens.zsh ]; then
     source ${HOME}/.tokens.zsh
 fi
 
-plugins=($plugins docker)
+plugins=($plugins docker git-prompt)
 
 # Oh my ZSH
 if [ -d ${HOME}/.oh-my-zsh ]; then
@@ -171,3 +171,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Added by serverless binary installer
 export PATH="$HOME/.serverless/bin:$PATH"
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"

@@ -1,8 +1,0 @@
-#!/usr/bin/perl
-
-use strict;
-use warnings;
-
-use JavaScript::Minifier qw(minify);
-
-minify(input => *STDIN, outfile => *STDOUT);
