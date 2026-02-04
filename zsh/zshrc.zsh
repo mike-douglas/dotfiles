@@ -101,3 +101,20 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+chruby ruby-3.1.3
+
+# bun completions
+[ -s "/Users/mdouglas/.oh-my-zsh/completions/_bun" ] && source "/Users/mdouglas/.oh-my-zsh/completions/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# claude
+export CLAUDE_INSTALL="$HOME/.local"
+export PATH="$CLAUDE_INSTALL/bin:$PATH"
+
+# Secretive SSH Agent
+export SSH_AUTH_SOCK=/Users/mdouglas/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
